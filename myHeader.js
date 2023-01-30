@@ -5,9 +5,20 @@ class MyHeader extends HTMLElement{
         const nav = document.createElement("nav");
         const ul = document.createElement("ul");
 
-        for(let i = 0; i < 5; i++){
+        const myLinks = [
+            ["Google", "https://www.google.com.br/"],
+            ["Bing", "https://www.bing.com/?cc=br"],
+            ["DuckDuckGo", "https://duckduckgo.com/"],
+            ["Ecosia", "https://www.ecosia.org/"]
+
+        ];
+
+        for(let i = 0; i < myLinks.length; i++){
             let li = document.createElement("li");
-            li.textContent = `Pagina ${i}`;
+            let a = document.createElement("a");
+            a.setAttribute("href", myLinks[i][1]);
+            a.textContent = myLinks[i][0];
+            li.appendChild(a);
             ul.appendChild(li);
         }
 
