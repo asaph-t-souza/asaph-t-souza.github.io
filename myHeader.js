@@ -4,12 +4,14 @@ class MyHeader extends HTMLElement{
         const header = document.createElement("header");
         const nav = document.createElement("nav");
         const ul = document.createElement("ul");
+        const titleDiv = document.createElement("div");
+        const pageTitle = document.createElement("h1");
 
         const myLinks = [
-            ["Google", "https://www.google.com.br/"],
-            ["Bing", "https://www.bing.com/?cc=br"],
-            ["DuckDuckGo", "https://duckduckgo.com/"],
-            ["Ecosia", "https://www.ecosia.org/"]
+            ["Inicio", "/"],
+            ["Teste", "/teste.html"],
+            ["Projeto 1", "/projects/projeto1.html"]
+
 
         ];
 
@@ -23,6 +25,9 @@ class MyHeader extends HTMLElement{
         }
 
         nav.appendChild(ul);
+        pageTitle.textContent = "Meu Site";
+        titleDiv.appendChild(pageTitle);   
+        header.appendChild(titleDiv);
         header.appendChild(nav);
         this.appendChild(header);
 
