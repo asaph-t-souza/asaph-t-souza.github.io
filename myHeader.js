@@ -1,7 +1,10 @@
 const myLinks = [
     ["Inicio", "/"],
     ["Teste", "/teste.html"],
-    ["Projeto 1", "/projects/projeto1.html"]
+    ["Projeto 1", "/projects/projeto1.html"],
+    ["Currículo", "/curriculo.html"],
+    ["GitHub", "https://github.com/Asaph-T-Souza"],
+    ["LinkedIn", "https://www.linkedin.com/in/asaph-teixeira-e-souza-038248170/"]
 ];
 
 class MyHeader extends HTMLElement{
